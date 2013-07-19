@@ -1,0 +1,40 @@
+@charset 'euc-jp';
+
+/* ログイン・テーブル内 
+///////////////////////////////////////////////////////////////////*/
+.login {
+  position: relative;
+  margin: 15px 0;
+  padding: 14px 19px 14px;
+  *padding-top: 19px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.img {
+  width: 100px;
+}
+
+dt {
+  color:#FF3300;
+}
+
+dd {
+  font-size: 12px;
+}
+
+.checkbox {
+  width: 25px;
+}
+
+.checkbox.inline + .checkbox.inline {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.checkbox-s {
+  width: 100px;
+}
