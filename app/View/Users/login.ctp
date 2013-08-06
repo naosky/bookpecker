@@ -1,39 +1,27 @@
 <div class="row">
-<div class="span4 offset8">
+
+<div class="col-lg-4 login">
 <!-- ログイン -->
-<div class="login">
-  <div>
-    <input type="text" placeholder="ユーザーID">
-  </div>
-  <div>
-    <input type="password" placeholder="パスワード">
-  </div>
-  <div>
-    <label class="checkbox checkbox-s">
-      <input type="checkbox">保存する
-    </label>
-    <a href="mypage.html"><button type="submit" class="btn">ログイン</button></a>
-  </div>
-</div>
+  <img src="/img/logo.png" class="img-responsive">
+    <div class="form-group form-login">
+        <input type="text" class="form-control" id="InputID" placeholder="ユーザーID">
+    </div>
+    <div class="form-group form-login">
+        <input type="text" class="form-control" id="InputPassword" placeholder="パスワード">
+    </div>
+    <div class="checkbox">
+        <label class="save-label">
+        <input type="checkbox">保存する
+        </label>
+    </div>
+    <a href="mylist.html"><button type="submit" class="btn btn-default">ログイン</button></a>
 
 <!-- 新規登録 -->
+<div align="right">
+<a href="create.html">→ 新規登録はこちら</a>
+</div>
 
-<div class="login">
-  <div>
-    <legend>Bookpecker始めませんか?</legend>
-  </div>
-  <div>
-    <input type="text" placeholder="ユーザーID">
-  </div>
-  <div>
-    <input type="password" placeholder="パスワード">
-  </div>
-  <div>
-    <button class="btn btn-primary">
-      <i class="icon-hand-right icon-white"></i> Bookpeckerに登録する
-    </button>
-  </div>
 </div>
-</div>
-</div>
-<hr>
+
+</div><!-- #row -->
+
