@@ -18,7 +18,7 @@
 
 <!-- 新規登録 -->
 <div align="right">
-<a href="create.html">→ 新規登録はこちら</a>
+<a href="add">→ 新規登録はこちら</a>
 </div>
 
 </div>

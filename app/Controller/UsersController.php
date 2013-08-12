@@ -8,7 +8,10 @@ class UsersController extends AppController {
     }
 
     public function add() {
-
+        $this->layout = 'bookpecker';
+        if($this->request->is('post')) {
+            var_dump($this->request->data);exit;
+        }
     }
 
     public function login() {

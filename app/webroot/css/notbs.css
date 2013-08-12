@@ -1,8 +1,9 @@
 @charset 'euc-jp';
 
 body {
-  background-image:url(../img/body_bg.png);
-/*  background-color: #F8F5E4; */
+  background-image: url(../img/body_bg.png);
+  background-color: #C2996B;
+  color: #1D1007;
 }
 
 /* ナビゲーションバー ================= */
@@ -75,6 +76,7 @@ body {
 
 h1 {
   color:#1D1007;
+  font-weight: bold;
 }
 
 h3 {
@@ -150,7 +152,7 @@ a:focus {
           box-shadow: inset 0 0px 0px #ffffff, 0 0 0 #333333;
 }
 
-/* ============================== */
+/* サムネイル ================================ */
 
 .img {
   width: 100px;
@@ -160,27 +162,8 @@ a:focus {
   width: 80px;
 }
 
-.checkbox-a {
-  width: 300px;
-}
-
-.checkbox-inline + .checkbox-inline {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.checkbox-s {
-  width: 100px;
-}
-
-label.checkbox-inline {
-  width: 42px;
-}
-
-p.muted-s {
-  margin-bottom: 0px;
-  font-size: 85%;
-  color: #999999;
+.img-thumbnail-data {
+  width: 120px;
 }
 
 /* テーブル ================================== */
@@ -194,7 +177,7 @@ th {
 }
 
 .table tbody > tr > td {
-  border-top: 0px;
+  border-top: 1px;
 }
 
 .user-table {
@@ -207,6 +190,56 @@ th {
   background-color: #1D1007;
   color: #C2996B;
 }
+
+.table-list {
+  background: #ffffff;
+  border: solid 1px #1D1007;
+  margin-bottom: 0;
+}
+
+.table-list tbody > tr {
+  border: solid 1px #eeeeee;
+}
+
+.table-data {
+  border: solid 1px #000000;
+}
+
+.table-data tbody > tr > td {
+  padding: 20px 40px 0px;
+}
+
+/* タブ ================================ */
+.tab-content {
+  background-color: #FFFFFF;
+  padding: 18px;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #ffffff;
+}
+
+.nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.428571429;
+  border: 1px solid transparent;
+  border-radius: 0px 0px 0 0;
+}
+
+.nav-tabs > li > a:hover {
+  border-color: #eeeeee;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #555555;
+  cursor: default;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-bottom-color: transparent;
+}
+
 
 /* インプット ================================ */
 
@@ -237,6 +270,16 @@ th {
   border-radius: 10px;
 }
 
+.badge-d {
+  color: #ffffff;
+  background-color: #7A1D1A;
+}
+
+.badge-n {
+  color: #ffffff;
+  background-color: #3A443C;
+}
+
 /* =========================================== */
 
 dt {
@@ -247,3 +290,42 @@ dd {
   font-size: 12px;
   color: #1D1007;
 }
+
+/* モーダル=================================== */
+
+.modal-body {
+  position: relative;
+  padding: 20px 20px 0px;
+}
+
+.modal-footer {
+  padding: 0px 20px 20px;
+  margin-top: 0px;
+  text-align: right;
+  border-top: 0px solid #e5e5e5;
+}
+
+.checkbox-a {
+  width: 300px;
+}
+
+.checkbox-inline + .checkbox-inline {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.checkbox-s {
+  width: 100px;
+}
+
+label.checkbox-inline {
+  width: 42px;
+}
+
+p.muted-s {
+  margin-bottom: 0px;
+  font-size: 85%;
+  color: #999999;
+}
+
+/* =========================================== */
