@@ -4,22 +4,28 @@ class UsersController extends AppController {
     public $uses = array('User');
     public function beforeFilter() {
         parent::beforeFilter();
+        $this->layout = 'bookpecker';
         $this->Auth->allow('add', 'login');
     }
 
     public function add() {
-        $this->layout = 'bookpecker';
         if($this->request->is('post')) {
             var_dump($this->request->data);exit;
         }
     }
 
     public function login() {
-        $this->layout = 'bookpecker';
         if($this->request->is('post')) {
-            var_dump($this->request->data);exit;
+            if ($this->Auth->login()) {
+                return $this->redirect($this->Auth->redirect());
+            } else {
+                $this->Session->setFlash('ログインIDとパスワードの組み合わせが間違っています。');
+            }
         }
+    }
 
-
+    public function logout() {
+        $this->Auth->logout();
+        return $this->redirect('/');
     }
 }

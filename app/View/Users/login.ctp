@@ -4,6 +4,7 @@
 <!-- ログイン -->
   <img src="/img/logo.png" class="img-responsive">
     <div class="form-group form-login">
+        <?php echo $this->Form->create('User'); ?>
         <input type="text" class="form-control" id="InputID" placeholder="ユーザーID">
     </div>
     <div class="form-group form-login">
@@ -14,7 +15,7 @@
         <input type="checkbox">保存する
         </label>
     </div>
-    <a href="mylist.html"><button type="submit" class="btn btn-default">ログイン</button></a>
+    <button type="submit" class="btn btn-default">ログイン</button></a>
 
 <!-- 新規登録 -->
 <div align="right">
