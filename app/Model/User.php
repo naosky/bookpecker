@@ -6,7 +6,7 @@ class User extends AppModel {
     public $validate = array(
         'username' => array(
             array('rule' => array('custom', '/^[a-zA-Z0-9]+$/'), 'message' => '半角英数字で入力してね'),
-            array('rule' => 'isUnique', 'message' => 'すでに使われているよ')
+            array('rule' => 'isUnique', 'message' => 'すでに使われてるよ')
         ),
         'password' => array(
             array('rule' => array('custom', '/^[a-zA-Z0-9]+$/'), 'message' => '半角英数字で入力してね'),
@@ -21,9 +21,4 @@ class User extends AppModel {
             $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
         }
     }
-     
-     public function add($data) {
-        return $this->save($data);
-     }
-
 }

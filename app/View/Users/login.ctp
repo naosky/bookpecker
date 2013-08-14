@@ -3,23 +3,23 @@
 <div class="col-lg-4 login">
 <!-- ログイン -->
   <img src="/img/logo.png" class="img-responsive">
+        <?php echo $this->Form->create('User',array('type'=>'post','action'=>'login')); ?>
     <div class="form-group form-login">
-        <?php echo $this->Form->create('User'); ?>
-        <input type="text" class="form-control" id="InputID" placeholder="ユーザーID">
+        <?php echo $this->Form->input('username',array('type'=>'text','div'=>false,'class'=>'form-control','label'=>false,'placeholder'=>'ユーザーID')); ?>
     </div>
     <div class="form-group form-login">
-        <input type="text" class="form-control" id="InputPassword" placeholder="パスワード">
+        <?php echo $this->Form->input('password',array('type'=>'password','div'=>false,'class'=>'form-control','label'=>false,'placeholder'=>'パスワード')); ?>
     </div>
-    <div class="checkbox">
+<!--    <div class="checkbox">
         <label class="save-label">
         <input type="checkbox">保存する
         </label>
-    </div>
-    <button type="submit" class="btn btn-default">ログイン</button></a>
+    </div> -->
+    <?php echo $this->Form->submit('ログイン',array('div'=>false,'class'=>'btn btn-default')); ?>
 
 <!-- 新規登録 -->
 <div align="right">
-<a href="add">→ 新規登録はこちら</a>
+    <?php echo $this->Html->link('→　新規登録はこちら',array('controller'=>'users','action'=>'add')); ?>
 </div>
 
 </div>

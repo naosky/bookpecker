@@ -10,7 +10,14 @@ class UsersController extends AppController {
 
     public function add() {
         if($this->request->is('post')) {
-            var_dump($this->request->data);exit;
+            if(!empty($this->request->data)) {
+                if($this->User->save($this->request->data)) {
+                    $this->Session->setFlash('ユーザーの登録が完了しました！LoginNow!!');
+                    $this->redirect('login');
+                } else {
+                    $this->Session->setFlash('ユーザーの登録に失敗しました！');
+                }
+            } 
         }
     }
 
