@@ -10,4 +10,5 @@ padding-bottom: 40px;
 </style>
 <link href="/css/bootstrap-responsive.css" rel="stylesheet">
 <link href="/css/notbs.css" rel="stylesheet">
+<link rel="shortcut icon" href="/favicon.ico">
 </head>
