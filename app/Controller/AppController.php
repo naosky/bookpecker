@@ -35,7 +35,7 @@ class AppController extends Controller {
     public $helpers = array('Html','Form');
     public $components = array(
         'Auth' => array(
-            'loginRedirect' => array('controller' => 'mylists', 'index' => 'index'),
+            'loginRedirect' => array('controller' => 'mylists', 'action' => 'mylist'),
             'logoutRedirect' => array('controller' => 'users','action' => 'logout'),
             'loginAction' => array('controller' => 'users', 'action' => 'login')
             

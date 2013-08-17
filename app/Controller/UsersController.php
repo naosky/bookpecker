@@ -12,11 +12,15 @@ class UsersController extends AppController {
         if($this->request->is('post')) {
             if(!empty($this->request->data)) {
                 if($this->User->save($this->request->data)) {
-                    $this->Session->setFlash('ユーザーの登録が完了しました！LoginNow!!');
+                    $msg = 'ユーザーの登録が完了しました。';
+                    $msg_level = 'alert-success';
                     $this->redirect('login');
                 } else {
-                    $this->Session->setFlash('ユーザーの登録に失敗しました！');
+                    $msg = 'ユーザーの登録に失敗しました。';
+                    $msg_level = 'alert-danger';
                 }
+                $this->set(compact('msg'));
+                $this->set(compact('msg_level'));
             } 
         }
     }
@@ -24,15 +28,20 @@ class UsersController extends AppController {
     public function login() {
         if($this->request->is('post')) {
             if ($this->Auth->login()) {
+                $user = $this->User->find('first',array('conditions'=>array('id'=>$this->User->id)));
+                $this->set(compact('user'));
                 return $this->redirect($this->Auth->redirect());
             } else {
-                $this->Session->setFlash('ログインIDとパスワードの組み合わせが間違っています。');
+                $msg = 'ログインIDとパスワードの組み合わせが間違っています';
+                $msg_level = 'alert-danger';
+                $this->set(compact('msg'));
+                $this->set(compact('msg_level'));
             }
         }
     }
 
     public function logout() {
         $this->Auth->logout();
-        return $this->redirect('/');
+        return $this->redirect('login');
     }
 }

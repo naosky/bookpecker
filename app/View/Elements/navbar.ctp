@@ -3,6 +3,5 @@
     <div class="container">
     
     <a class="navbar-brand" href="#">bookpecker</a>
-	
     </div>
 </div>
