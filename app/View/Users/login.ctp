@@ -1,5 +1,10 @@
 <div class="row">
-
+    <?php if(!empty($msg)) :?>
+        <div class=<?php echo $msg_level; ?>>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong><?php echo $msg; ?></strong>
+        </div>
+    <?php endif; ?>
 <div class="col-lg-4 login">
 <!-- ログイン -->
   <img src="/img/logo.png" class="img-responsive">
