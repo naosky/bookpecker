@@ -130,6 +130,17 @@ body {
   height: 34px;
 }
 
+.sociali {
+  padding-left: 0;
+  margin-right: 15px;
+}
+
+li > .sociali {
+  margin: 10px 0px 0 0;
+  width: 28px;
+  height: 28px;
+}
+
 /* ============================== */
 
 h1 {
@@ -329,6 +340,21 @@ a:focus {
 }
 
 .alert {
+  color: #38332E;
+}
+
+.new {
+  border: solid 0px #A7A497;
+}
+
+.new > .media > span > .badge {
+  background-color: #A89048;
+  border-color: #A89048;
+}
+
+.new > .media > .media-body > .alert {
+  background-color: #A89048;
+  border-color: #A89048;
   color: #ffffff;
   padding: 4px 15px;
   margin: 5px 5px 0 15px;
@@ -337,29 +363,49 @@ a:focus {
   border-radius: 2px;
 }
 
-.new > span > .badge,
-.new > .media-body > .alert {
-  background-color: #A89048;
-  border-color: #A89048;
-}
-
-.default > span > .badge,
-.default > .media-body > .alert {
+.default > .media > span > .badge {
   background-color: #A7A497;
   border-color: #A7A497;
 }
 
-.complete > span > .badge,
-.complete > .media-body > .alert {
+.default > .media > .media-body > .alert {
+  background-color: #A7A497;
+  border-color: #A7A497;
+  color: #ffffff;
+  padding: 4px 15px;
+  margin: 5px 5px 0 15px;
+  min-height: 26px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.complete > .media > span > .badge {
   background-color: #38332E;
   border-color: #38332E;
 }
 
-.new > span > .badge,
-.default > span > .badge,
-.complete > span > .badge {
+.complete > .media > .media-body > .alert {
+  background-color: #38332E;
+  border-color: #38332E;
+  color: #ffffff;
+  padding: 4px 15px;
+  margin: 5px 5px 0 15px;
+  min-height: 26px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.new > .media > span > .badge,
+.default > .media > span > .badge,
+.complete > .media > span > .badge {
   border-radius: 0px;
   min-width: 64px;
+}
+
+.time {
+  color: #000000;
+  position: absolute;
+  right: 25px;
 }
 
 /* =========================================== */
@@ -443,47 +489,43 @@ dd {
   width: 64px;
 }
 
-.img-thumbnail-data {
-  width: 100px;
-}
-
 /* モーダル=================================== */
 
 .modal-content {
   position: relative;
-  background-color: #A7A497;
-  border: 1px solid #A7A497;
-  border-radius: 6px;
+  background-color: #F1F2ED;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   outline: none;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
-  max-width: 520px;
   color: #33383C;
 }
 
 .modal-header {
-  margin-top: 0px;
-  margin-bottom: 15px;
-  border-bottom: 0px;
+  padding: 20px;
+}
+
+.modal-header .close {
+  margin-top: -8px;
 }
 
 .modal-body {
   position: relative;
-  padding: 0px 10px 0px;
+  padding: 0 20px;
 }
 
-.modal-table tbody > tr > td {
-  border: solid 0px #000000;
-  background-color: #F0F0ED;
-  vertical-align: middle;
-  padding: 20px 20px;
+.modal-panel {
+  background: transparent;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05);
+  padding: 0 15px;
 }
 
 .modal-footer {
-  padding: 0px 15px 15px;
+  margin-top: 0;
+  padding: 19px 20px 20px;
   text-align: right;
-  border-top: 0px;
 }
 
 .checkbox-a {
@@ -504,12 +546,11 @@ label.checkbox-inline {
 }
 
 .close {
-    color: #ffffff
-    text-shadow: none;
+  text-shadow: none;
 }
 
 .close:hover, .close:focus {
-    color: #FFFFFF;
+  color: #504A42;
 }
 
 .modal-text{
@@ -527,6 +568,10 @@ label.checkbox-inline {
 }
 
 .text-warning {
+  color: #c09853;
+}
+
+.alert-warning {
   color: #c09853;
 }
 

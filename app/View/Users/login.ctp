@@ -1,5 +1,11 @@
 <div class="row">
 
+<?php if(!empty($msg)) :?>
+        <div class=<?php echo CLASS_ERROR; ?>>
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>※</strong><?php echo $msg; ?>
+        </div>
+<?php endif; ?>
 <div class="col-sm-12">
     <h1>
         <a href="/"><img src="/img/logo.png" alt="bookpecker(ブックペッカー) 漫画収集データベース"></a>
