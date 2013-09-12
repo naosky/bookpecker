@@ -17,7 +17,7 @@ class UsersController extends AppController {
                     $this->redirect($this->Auth->redirect());
                 } else {
                     $msg = 'ユーザーの登録に失敗しました。';
-                    $msg_level = '"'.'alert alert-danger'.'"';
+                    $msg_level = CLASS_ERROR;
                     $this->set(compact('msg'));
                     $this->set(compact('msg_level'));
                 }
@@ -33,8 +33,8 @@ class UsersController extends AppController {
                 $this->set(compact('user'));
                 $this->redirect($this->Auth->redirect());
             } else {
-                $msg = 'ログインIDとパスワードの組み合わせが間違っています';
-                $msg_level = '"'.'alert alert-danger'.'"';
+                $msg = 'ユーザー名とパスワードの組み合わせが間違っています';
+                $msg_level = CLASS_ERROR;
                 $this->set(compact('msg'));
                 $this->set(compact('msg_level'));
             }
@@ -54,7 +54,7 @@ class UsersController extends AppController {
             return $user;
         } else {
             $msg = 'ログインに失敗しました。';
-            $msg_level = '"'.'alert alert-danger'.'"';
+            $msg_level = CLASS_ERROR;
             $this->set(compact('msg'));
             $this->set(compact('msg_level'));
             $this->redirect('login');

@@ -109,3 +109,5 @@ CakeLog::config('error', array(
 ));
 
 CakePlugin::load('DebugKit');
+//Configure
+Configure::load('book_constant');
