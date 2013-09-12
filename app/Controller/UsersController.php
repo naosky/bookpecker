@@ -12,15 +12,15 @@ class UsersController extends AppController {
         if($this->request->is('post')) {
             if(!empty($this->request->data)) {
                 if($this->User->save($this->request->data)) {
-                    $msg = 'ユーザーの登録が完了しました。';
-                    $msg_level = 'alert-success';
-                    $this->redirect('login');
+                    $user = $this->_add_login($this->request->data);
+                    $this->set(compact('user'));
+                    $this->redirect($this->Auth->redirect());
                 } else {
                     $msg = 'ユーザーの登録に失敗しました。';
-                    $msg_level = 'alert-danger';
+                    $msg_level = '"'.'alert alert-danger'.'"';
+                    $this->set(compact('msg'));
+                    $this->set(compact('msg_level'));
                 }
-                $this->set(compact('msg'));
-                $this->set(compact('msg_level'));
             } 
         }
     }
@@ -28,12 +28,13 @@ class UsersController extends AppController {
     public function login() {
         if($this->request->is('post')) {
             if ($this->Auth->login()) {
-                $user = $this->User->find('first',array('conditions'=>array('id'=>$this->User->id)));
+                var_dump($this->Auth->user);exit;
+                $user = $this->User->find('first',array('conditions'=>array('id'=>$this->Auth->user('id'))));
                 $this->set(compact('user'));
-                return $this->redirect($this->Auth->redirect());
+                $this->redirect($this->Auth->redirect());
             } else {
                 $msg = 'ログインIDとパスワードの組み合わせが間違っています';
-                $msg_level = 'alert-danger';
+                $msg_level = '"'.'alert alert-danger'.'"';
                 $this->set(compact('msg'));
                 $this->set(compact('msg_level'));
             }
@@ -43,5 +44,20 @@ class UsersController extends AppController {
     public function logout() {
         $this->Auth->logout();
         return $this->redirect('login');
+    }
+
+    private function _add_login($user_info) {
+        if($this->Auth->login($user_info)) {
+            var_dump($this->Auth->user);exit;
+            $user = $this->User->find('first',array('conditions'=>array('id'=>$this->Auth->user('id'))));
+            var_dump($user);exit;
+            return $user;
+        } else {
+            $msg = 'ログインに失敗しました。';
+            $msg_level = '"'.'alert alert-danger'.'"';
+            $this->set(compact('msg'));
+            $this->set(compact('msg_level'));
+            $this->redirect('login');
+        }
     }
 }

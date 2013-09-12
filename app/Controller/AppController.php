@@ -34,12 +34,14 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
     public $helpers = array('Html','Form');
     public $components = array(
+        'Session',
         'Auth' => array(
+            'authenticate' => array('Form' => array()),
             'loginRedirect' => array('controller' => 'mylists', 'action' => 'mylist'),
             'logoutRedirect' => array('controller' => 'users','action' => 'logout'),
             'loginAction' => array('controller' => 'users', 'action' => 'login')
             
-    ),'DebugKit.Toolbar', 'Session',);
+    ),'DebugKit.Toolbar');
 
     public function beforeFilter() {
     }

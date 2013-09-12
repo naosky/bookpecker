@@ -1,5 +1,5 @@
 <div class="row">
-
+<?php var_dump($user); ?>
 	<!-- ユーザー情報 -->
 	<div class="col-lg-3">
     	<table class="table user-table">
