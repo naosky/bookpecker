@@ -6,12 +6,12 @@ class User extends AppModel {
     public $validate = array(
         'username' => array(
             array('rule' => array('custom', '/^[a-zA-Z0-9]+$/'), 'message' => '半角英数字で入力してね'),
-            array('rule' => 'isUnique', 'message' => 'すでに使われてるよ')
+            array('rule' => 'isUnique', 'message' => '既に使用されているユーザー名です')
         ),
         'password' => array(
             array('rule' => array('custom', '/^[a-zA-Z0-9]+$/'), 'message' => '半角英数字で入力してね'),
-            array('rule' => array('minLength', 6), 'message' => '6 文字以上入力してね'),
-            array('rule' => array('maxLength', 20), 'message' => '20 文字以下にしてね')
+            array('rule' => array('minLength', 6), 'message' => 'パスワードは半角英数で６文字以上としてください'),
+            array('rule' => array('maxLength', 20), 'message' => 'パスワードは半角英数で20 文字以下としてください')
         )
     );
 

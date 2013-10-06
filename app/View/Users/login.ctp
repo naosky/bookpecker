@@ -1,7 +1,7 @@
 <div class="row">
 
 <?php if(!empty($msg)) :?>
-        <div class=<?php echo CLASS_ERROR; ?>>
+        <div class=<?php echo $msg_level; ?>>
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             <strong>※</strong><?php echo $msg; ?>
         </div>
@@ -38,6 +38,7 @@
         <dt>2013.08.24</dt>
         <dd>サイト更新</dd>
     </dl>
+    <hr>
 </div>
 </div>
 

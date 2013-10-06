@@ -16,6 +16,7 @@
     <h3>新規登録（無料）</h3>
     <p class="text-primary">お好きなお名前とパスワードを入力してください</p>
     <div class="input-group">
+        <?php echo $this->Form->create('User',array('type'=>'post','action'=>'add')); ?>
         <?php echo $this->Form->input('username',array('type'=>'text','div'=>false,'class'=>'form-control','label'=>false,'placeholder'=>'USER NAME',)); ?>
     </div>
     <div class="input-group">

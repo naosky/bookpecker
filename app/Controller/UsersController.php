@@ -28,8 +28,9 @@ class UsersController extends AppController {
     public function login() {
         if($this->request->is('post')) {
             if ($this->Auth->login()) {
-                var_dump($this->Auth->user);exit;
+//                var_dump($this->Auth->User);exit;
                 $user = $this->User->find('first',array('conditions'=>array('id'=>$this->Auth->user('id'))));
+//                var_dump($this->Auth->user('id'));exit;
                 $this->set(compact('user'));
                 $this->redirect($this->Auth->redirect());
             } else {

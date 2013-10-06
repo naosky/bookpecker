@@ -110,4 +110,5 @@ CakeLog::config('error', array(
 
 CakePlugin::load('DebugKit');
 //Configure
-Configure::load('book_constant');
+define('CLASS_ERROR', '"'.'col-sm-12 alert alert-warning'.'"');
+//Configure::load("book_constant",'default');
