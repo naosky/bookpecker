@@ -1,5 +1,6 @@
 <?php
 class UsersController extends AppController {
+//test
     public $layout;
     public $uses = array('User');
     public function beforeFilter() {
