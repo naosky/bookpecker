@@ -107,8 +107,9 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
-
-CakePlugin::load('DebugKit');
+CakePlugin::loadAll();
+//CakePlugin::load('DebugKit');
+//CakePlugin::load('Amazon.Pas');
 //Configure
 define('CLASS_ERROR', '"'.'col-sm-12 alert alert-warning'.'"');
 //Configure::load("book_constant",'default');

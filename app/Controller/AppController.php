@@ -41,7 +41,7 @@ class AppController extends Controller {
             'logoutRedirect' => array('controller' => 'users','action' => 'logout'),
             'loginAction' => array('controller' => 'users', 'action' => 'login')
             
-    ),'DebugKit.Toolbar');
+    ),'DebugKit.Toolbar','Amazon.Pas');
 
     public function beforeFilter() {
     }
